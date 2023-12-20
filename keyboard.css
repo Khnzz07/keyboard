@@ -1,1 +1,65 @@
-hello 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282525;
+  }
+  
+  .button {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 5px;
+    max-width: 800px;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #090808;
+    border: 1px solid #f5f1f1;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: aliceblue;
+  }
+  
+  .btn:hover {
+    background-color: #4a3f3f;
+  }
+  
+  #note {
+    grid-column: span 2;
+  }
+  
+  #spc {
+    grid-column: span 5;
+  }
+  
+  #ent,
+  #del {
+    grid-column: span 2;
+  }
+  
+  #shift,
+  #ctrl,
+  #alt {
+    grid-column: span 2;
+  }
+  
+  #up,
+  #down,
+  #left,
+  #right {
+    grid-column: span 2;
+  }
+  
+  #keyboard button {
+    grid-column: span 1;
+  }
+  
