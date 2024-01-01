@@ -37,26 +37,28 @@ body {
     grid-column: span 2;
   }
   
-  #spc {
-    grid-column: span 5;
+  #b32 {
+    grid-column: span 6;
   }
   
-  #ent,
-  #del {
+  #b13 {
     grid-column: span 2;
   }
   
-  #shift,
-  #ctrl,
-  #alt {
+  #b16,
+  #bb9 {
     grid-column: span 2;
   }
+
+  #b20{
+    grid-column: span 3;
+  }
   
-  #up,
-  #down,
-  #left,
-  #right {
-    grid-column: span 2;
+  #b38,
+  #b40,
+  #b37,
+  #b39 {
+    grid-column: span 1;
   }
   
   #keyboard button {

@@ -32,47 +32,44 @@
 //     document.querySelector("#f").style.backgroundColor = "black";
 //   }
 // });
+// ********************************************************************
+// const btns = document.querySelectorAll(".btn");
+// const colors = ["red", "green", "blue", "violet"];
+
+// function handleKeyDown(evt) {
+//   const key = document.querySelector(`#${evt.key.toLowerCase()}`);
+//   if (key) {
+//     const index = Math.floor(Math.random() * colors.length);
+//     key.style.backgroundColor = colors[index];
+//   }
+// }
+
+// function handleKeyUp(evt) {
+//   const key = document.querySelector(`#${evt.key.toLowerCase()}`);
+//   if (key) {
+//     key.style.backgroundColor = "black";
+//   }
+// }
+
+// document.body.addEventListener("keydown", handleKeyDown);
+// document.body.addEventListener("keyup", handleKeyUp);
+// ******************************************************************
+
 const btns = document.querySelectorAll(".btn");
 const colors = ["red", "green", "blue", "violet"];
 
 function handleKeyDown(evt) {
-  evt.preventDefault(); // Prevent the default behavior for some keys
-  let key;
+  let keyCode = evt.keyCode;
+  for (let i = 0; i < btns.length; i++) {
+    let btnId = parseInt(btns[i].id);
 
-  if (evt.key === " ") {
-    // Handle the space key
-    key = document.getElementById("spc");
-  } else {
-    // Use evt.key.toLowerCase() for regular keys
-    key =
-      document.getElementById(evt.key.toLowerCase()) ||
-      document.getElementById(evt.code.toLowerCase());
-  }
+    if (btnId === keyCode) {
+      console.log(`Button with id ${keyCode} found!`);
+      btns[i].style.backgroundColor = "black";
 
-  if (key) {
-    const index = Math.floor(Math.random() * colors.length);
-    key.style.backgroundColor = colors[index];
-  }
-}
-
-function handleKeyUp(evt) {
-  evt.preventDefault(); // Prevent the default behavior for some keys
-  let key;
-
-  if (evt.key === " ") {
-    // Handle the space key
-    key = document.getElementById("spc");
-  } else {
-    // Use evt.key.toLowerCase() for regular keys
-    key =
-      document.getElementById(evt.key.toLowerCase()) ||
-      document.getElementById(evt.code.toLowerCase());
-  }
-
-  if (key) {
-    key.style.backgroundColor = "black";
+      break;
+    }
   }
 }
 
 document.body.addEventListener("keydown", handleKeyDown);
-document.body.addEventListener("keyup", handleKeyUp);
