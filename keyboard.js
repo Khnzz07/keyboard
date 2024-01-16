@@ -32,7 +32,7 @@
 //     document.querySelector("#f").style.backgroundColor = "black";
 //   }
 // });
-// ********************************************************************
+// *****************************************************************
 // const btns = document.querySelectorAll(".btn");
 // const colors = ["red", "green", "blue", "violet"];
 
